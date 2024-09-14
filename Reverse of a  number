@@ -1,0 +1,31 @@
+//  Reverse of a Number
+
+#include<stdio.h>
+
+
+int reverse(a){
+    int temp;
+    temp=a;
+    int mul=0;
+    do {
+                int rem=temp%10;
+                int rev=temp/10;
+                temp=rev;
+                mul=(mul*10)+rem;
+        }while(temp>0);
+    
+        return mul;
+}
+
+int reverse(int a );
+
+int main(void) {
+    int num;
+    
+    scanf("%d",&num);
+    int result;
+    result=reverse(num);
+    printf("reverse of a number is   :   %d",result);
+    
+    return 0;
+}
