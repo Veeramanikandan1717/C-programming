@@ -1,0 +1,29 @@
+#include<stdio.h>
+
+
+int sumofdigits(a){
+    int temp;
+    temp=a;
+    int mul=0;
+    do {
+                int rem=temp%10;
+                int rev=temp/10;
+                temp=rev;
+                mul+=rem;
+        }while(temp>0);
+    
+        return mul;
+}
+
+int sumofdigits(int a );
+
+int main(void) {
+    int num;
+    
+    scanf("%d",&num);
+    int result;
+    result=sumofdigits(num);
+    printf("Sum of Digits of a given a Number   :   %d",result);
+    
+    return 0;
+}
